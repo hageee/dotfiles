@@ -1,0 +1,38 @@
+"*":
+  "exception-reporting":
+    userId: "f3d3fef5-d1d0-76e6-11a6-db0d9fd8b5eb"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "74dd163db65c8374e6a359008c8db95486acea09"
+  autocomplete:
+    includeCompletionsFromAllBuffers: true
+  linter:
+    showErrorInline: true
+    statusBar: "Show all errors"
+    ignoredLinterErrors: [
+      "php"
+    ]
+  core:
+    disabledPackages: [
+      "symbols-view"
+      "minimap"
+      "regex-railroad-diagram"
+    ]
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
+  "recent-files":
+    updated: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+  "atom-beautify":
+    _analyticsUserId: "5ae51fde-60a4-47ed-ac35-91cd33ea0f86"
+  editor:
+    preferredLineLength: 128
+    invisibles: {}
+    tabLength: 4
+    showIndentGuide: true
+    showInvisibles: true
+  "autoclose-html": {}
