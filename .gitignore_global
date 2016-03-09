@@ -2,6 +2,8 @@ GPATH
 GRTAGS
 GTAGS
 .projectile
+projectile-bookmarks.eld
+projectile.cache
 .DS_Store
 *.cache
 .tags*

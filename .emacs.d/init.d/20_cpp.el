@@ -53,13 +53,6 @@
 ;;   (global-auto-complete-mode t))
 ;; (my-ac-config)
 
-(require 'function-args)
-(fa-config-default)
-
-(define-key function-args-mode-map (kbd "M-o") nil)
-(define-key c-mode-map (kbd "C-M-:") 'moo-complete)
-(define-key c++-mode-map (kbd "C-M-:") 'moo-complete)
-
 (define-key c-mode-map (kbd "C-M-o") 'ff-find-other-file)
 (define-key c++-mode-map (kbd "C-M-o") 'ff-find-other-file)
 
@@ -69,10 +62,5 @@
  '(fa-face-semi ((t (:background "#3f3f3f" :foreground "#ffffff" :weight bold))))
  '(fa-face-type ((t (:inherit (quote font-lock-type-face) :background "#3f3f3f"))))
  '(fa-face-type-bold ((t (:inherit (quote font-lock-type-face) :background "#999999" :bold t)))))
-
-(require 'c-eldoc)
-(add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
-(add-hook 'c++-mode-hook 'c-turn-on-eldoc-mode)
-(setq c-eldoc-buffer-regenerate-time 60)
 
 ;;
