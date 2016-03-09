@@ -3,7 +3,7 @@
 ## Instrallation
 
 ```
-> git clone git@github.com:takashibagura/dotfiles.git
-> cd dotfiles
-> zsh ./setup.sh
+git clone --recursive git@github.com:takashibagura/dotfiles.git
+cd dotfiles
+zsh ./setup.sh
 ```

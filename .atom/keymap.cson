@@ -21,6 +21,9 @@
 # * https://atom.io/docs/latest/advanced/keymaps
 
 '.editor':
-   'cmd-space': 'autocomplete:toggle'
-   'shift-alt-cmd-down': 'resize-panes:shrink-active-pane'
-   'shift-alt-cmd-up': 'resize-panes:enlarge-active-pane'
+  'cmd-space': 'autocomplete:toggle'
+  'shift-alt-cmd-down': 'resize-panes:shrink-active-pane'
+  'shift-alt-cmd-up': 'resize-panes:enlarge-active-pane'
+'atom-text-editor':
+  'ctrl-b': 'unset!'
+  'ctrl-cmd-b': 'git-blame:toggle'

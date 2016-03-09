@@ -23,29 +23,6 @@
 ;; narrowing を禁止
 (put 'narrow-to-region 'disabled nil)
 
-;; キーバインド
-(define-key global-map (kbd "M-?") 'help-for-help)        ; ヘルプ
-(define-key global-map (kbd "C-z") 'undo)                 ; undo
-(define-key global-map (kbd "C-c i") 'indent-region)      ; インデント
-(define-key global-map (kbd "C-c C-i") 'hippie-expand)    ; 補完
-(define-key global-map (kbd "C-c c") 'comment-or-uncomment-region) ; コメントアウト
-(define-key global-map (kbd "C-c l") 'goto-line)          ; 指定行へ移動
-(define-key global-map (kbd "C-x g") 'grep)               ; grep
-(define-key global-map (kbd "C-c f") 'find-dired)         ; find-dired
-(global-set-key (kbd "C-M-l") 'shrink-window-horizontally)
-(global-set-key (kbd "C-M-r") 'enlarge-window-horizontally)
-(global-set-key (kbd "C-M-d") 'shrink-window)
-(global-set-key (kbd "C-M-u") 'enlarge-window)
-
-;; C-c nで行番号表示
-(define-key global-map (kbd "C-c n") 'linum-mode)
-
-;; ウィンドウ移動
-;; 次のウィンドウへ移動
-(define-key global-map (kbd "C-M-n") 'next-multiframe-window)
-;; 前のウィンドウへ移動
-(define-key global-map (kbd "C-M-p") 'previous-multiframe-window)
-
 ;; 再帰的にgrep
 (require 'grep)
 (setq grep-command-before-query "grep -nH -r --exclude \"*.log\" -e ")
@@ -90,9 +67,6 @@
              space-after-tab)) ; タブの後にあるスペースを対象とする。
 ;; デフォルトで視覚化を有効にする。
 (global-whitespace-mode 1)
-
-(require 'jaspace)
-(setq jaspace-modes t)
 
 ;;; カーソルの位置が何文字目かを表示する
 (column-number-mode t)
@@ -185,11 +159,5 @@
 ;;ウィンドウを左右に分割したとき用の設定
 (setq-default truncate-partial-width-windows t)
 
-(require 'auto-async-byte-compile)
-(setq auto-async-byte-compile-exclude-files-regexp "/junk/")
-(add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)
-
-;; THeme
-;(load-theme 'monokai t)
-(load-theme 'zen-and-art t)
-(enable-theme 'zen-and-art)
+(require 'flycheck)
+(add-hook 'after-init-hook #'global-flycheck-mode)

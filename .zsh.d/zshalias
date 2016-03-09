@@ -1,0 +1,41 @@
+if [ -d '/Applications' ]; then
+  alias vim='env LANG=ja_JP.UTF-7 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+  # Cot Editor
+  alias cot='open $1 -a /Applications/CotEditor.app'
+fi
+
+if [ -d '/usr/local/Cellar' ]; then
+  alias emacs='TERM=xterm-256color /usr/local/Cellar/emacs/24.5/bin/emacs -nw'
+  alias e='TERM=xterm-256color /usr/local/Cellar/emacs/24.5/bin/emacs -nw'
+fi
+
+alias ls="ls -aFG"
+alias ll="ls -lh"
+# Bundler
+alias be='bundle exec'
+alias bes='bundle exec spring'
+
+# PostgreSQL
+alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pg_stop='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop'
+
+# Git
+alias gad='git add'
+alias gbr='git branch'
+alias gbra='git branch -avv'
+alias gcm='git commit'
+alias gco='git checkout'
+alias glg='git log'
+alias gmg='git merge'
+alias gft='git fetch'
+alias gpl='git pull'
+alias gps='git push'
+alias grb='git rebase'
+alias grl='git reflog'
+alias grmt='git remote'
+alias grt='git reset'
+alias grtf='git reset --hard FETCH_HEAD'
+alias grm='git rm'
+alias gst='git status'
+alias gd='git diff'
+alias gdt='git difftool --dir-diff'

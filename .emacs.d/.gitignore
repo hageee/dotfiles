@@ -1,0 +1,8 @@
+url/cookies
+elpa/archives
+history
+places
+recentf
+semanticdb/
+srecode-map.el
+init.d/**/*.elc

@@ -1,8 +1,14 @@
 # -*- sh -*-
 
+# Antigenで管理しているパッケージを読み込む
+[ -f ${HOME}/dotfiles/antigen/antigen.zsh ] && source ${HOME}/dotfiles/.zsh.d/zshrc.antigen
+
 # キーバインド
 ## Emacsキーバインドを使う。
 bindkey -e
+
+# grepで # などがエラーにならないようにする
+setopt nonomatch
 
 # ディレクトリ移動
 ## ディレクトリ名だけでcdする。
@@ -351,8 +357,7 @@ esac
 ###               globがマッチしなかったり存在しないパスを無視する。
 ###            -: シンボリックリンク先のパスを評価。
 ###            .: 通常のファイルのみ残す。
-### 2011-11-06
-alais_files=(~/.zsh.d/zshalias(N-.)
+alias_files=(~/.zsh.d/zshalias(N-.)
              ~/.zshalias(N-.))
 for alias_file in ${alias_files}; do
     source "${alias_file}"
@@ -379,3 +384,11 @@ update_title() {
 if [ -n "$DISPLAY" ]; then
     preexec_functions=($preexec_functions update_title)
 fi
+
+## Homebrewでインストール時にBrewfileを更新
+#if [ -f $(brew --prefix)/etc/brew-wrap ];then
+# source $(brew --prefix)/etc/brew-wrap
+#fi
+
+# キーバインドを読み込む
+[ -f ${HOME}/dotfiles/.zsh.d/zshkeybind ] && source ${HOME}/dotfiles/.zsh.d/zshkeybind

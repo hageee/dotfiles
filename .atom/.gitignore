@@ -3,5 +3,8 @@ compile-cache
 dev
 .npm
 .node-gyp
-/packages/
+packages/
 projects.cson
+.apm
+.git-history
+blob-store

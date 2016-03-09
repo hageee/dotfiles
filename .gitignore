@@ -1,10 +1,6 @@
-.DS_Store
-*.elc
+.zshenv
+.zshrc
 abbrev_defs
 ac-comphist.dat
 auto-save-list
-.emacs.d/url/cookies
-.emacs.d/elpa/archives
-.emacs.d/history
-.emacs.d/url/cookies
-.atom/.apm
+projectile.cache

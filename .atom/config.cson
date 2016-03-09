@@ -36,3 +36,7 @@
     showIndentGuide: true
     showInvisibles: true
   "autoclose-html": {}
+  react: {}
+".ruby.source":
+  editor:
+    tabLength: 2
