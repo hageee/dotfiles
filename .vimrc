@@ -8,5 +8,3 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 set backspace=indent,eol,start
-set mouse=a
-
