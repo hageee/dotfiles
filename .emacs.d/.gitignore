@@ -6,3 +6,4 @@ recentf
 semanticdb/
 srecode-map.el
 init.d/**/*.elc
+init.d/99*

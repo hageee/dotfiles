@@ -12,11 +12,12 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.inl\\'" . c++-mode))
 
-(defun get-project-include-directories()
-  (append (mapcar (lambda (p) (concat (projectile-project-root) p)) '("include"))
-          (list "/path/to/include")
-          )
-  )
+;; Additional include directories
+;(defun get-project-include-directories()
+;  (append (mapcar (lambda (p) (concat (projectile-project-root) p)) '("include" "src"))
+;          (list "/path/to/include")
+;          )
+;  )
 
 (require 'flycheck)
 (add-hook 'c-mode-common-hook 'flycheck-mode)
@@ -39,19 +40,17 @@
 (add-hook 'c++-mode-hook 'my:ac-c-headers-init)
 (add-hook 'c-mode-hook 'my:ac-c-headers-init)
 
-;; TODO install clang-complete
-;; https://github.com/Golevka/emacs-clang-complete-async
-;;(require 'auto-complete-clang-async)
-;; (defun ac-cc-mode-setup ()
-;;   (setq ac-clang-complete-executable "~/.emacs.d/clang-complete")
-;;   (setq ac-sources (append ac-sources '(ac-source-clang-async)))
-;;   (ac-clang-launch-completion-process))
+(require 'auto-complete-clang-async)
+(defun ac-cc-mode-setup ()
+  (setq ac-clang-complete-executable "~/.emacs.d/clang-complete")
+  (setq ac-sources (append ac-sources '(ac-source-clang-async)))
+  (ac-clang-launch-completion-process))
 
-;; (defun my-ac-config ()
-;;   (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
-;;   (add-hook 'auto-complete-mode-hook 'ac-common-setup)
-;;   (global-auto-complete-mode t))
-;; (my-ac-config)
+(defun my-ac-config ()
+  (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
+  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+  (global-auto-complete-mode t))
+(my-ac-config)
 
 (define-key c-mode-map (kbd "C-M-o") 'ff-find-other-file)
 (define-key c++-mode-map (kbd "C-M-o") 'ff-find-other-file)

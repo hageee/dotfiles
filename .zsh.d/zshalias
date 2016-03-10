@@ -4,9 +4,18 @@ if [ -d '/Applications' ]; then
   alias cot='open $1 -a /Applications/CotEditor.app'
 fi
 
+## Emacs
+
+### Mac OSX
 if [ -d '/usr/local/Cellar' ]; then
   alias emacs='TERM=xterm-256color /usr/local/Cellar/emacs/24.5/bin/emacs -nw'
   alias e='TERM=xterm-256color /usr/local/Cellar/emacs/24.5/bin/emacs -nw'
+fi
+
+### Linux
+if [ -f '/usr/local/bin/emacs' ]; then
+  alias emacs='TERM=xterm-256color emacs -nw'
+  alias e='TERM=xterm-256color emacs -nw'
 fi
 
 alias ls="ls -aFG"

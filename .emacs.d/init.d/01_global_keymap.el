@@ -1,4 +1,7 @@
-;; キーバインド
+;;; キーバインド --- キーバインド
+;;; Commentary:
+
+;;; Code:
 (define-key global-map (kbd "M-?") 'help-for-help)        ; ヘルプ
 (define-key global-map (kbd "C-z") 'undo)                 ; undo
 (define-key global-map (kbd "C-c i") 'indent-region)      ; インデント
@@ -31,3 +34,8 @@
 (define-key global-map (kbd "M-r")     'helm-resume)
 (define-key global-map (kbd "C-M-h")   'helm-apropos)
 (define-key global-map (kbd "M-a")   'helm-for-files)
+
+;; Magit
+(define-key global-map (kbd "M-g")     'magit-status)
+
+;;; 01_global_keymap.el ends here
