@@ -161,3 +161,6 @@
 
 (require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; imenu index自動更新
+(setq imenu-auto-rescan t)

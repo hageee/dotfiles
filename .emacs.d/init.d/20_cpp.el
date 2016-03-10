@@ -55,11 +55,18 @@
 (define-key c-mode-map (kbd "C-M-o") 'ff-find-other-file)
 (define-key c++-mode-map (kbd "C-M-o") 'ff-find-other-file)
 
-(custom-set-faces
- '(fa-face-hint ((t (:background "#3f3f3f" :foreground "#ffffff"))))
- '(fa-face-hint-bold ((t (:background "#3f3f3f" :weight bold))))
- '(fa-face-semi ((t (:background "#3f3f3f" :foreground "#ffffff" :weight bold))))
- '(fa-face-type ((t (:inherit (quote font-lock-type-face) :background "#3f3f3f"))))
- '(fa-face-type-bold ((t (:inherit (quote font-lock-type-face) :background "#999999" :bold t)))))
+;; semantic-create-imenu-indexは
+;; No items suitable for an index found in this buffer
+;; になるため常にデフォルトを使う
+(add-hook 'c++-mode-hook (lambda () (imenu-force-default-create-function)))
+(add-hook 'c-mode-hook (lambda () (imenu-force-default-create-function)))
+
+(defun imenu-force-default-create-function()
+  (interactive)
+  (setq imenu-create-index-function 'imenu-default-create-index-function)
+  )
+
+(define-key c-mode-map (kbd "C-c s") 'imenu-force-default-create-function)
+(define-key c++-mode-map (kbd "C-c s") 'imenu-force-default-create-function)
 
 ;;
