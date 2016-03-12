@@ -27,3 +27,19 @@
 'atom-text-editor':
   'ctrl-b': 'unset!'
   'ctrl-cmd-b': 'git-blame:toggle'
+  
+'body:not([mini])':
+  'ctrl-y': 'core:paste'
+
+'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-a': 'editor:move-to-first-character-of-line'
+  'ctrl-shift-K': 'editor:cut-to-end-of-line'
+
+'.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])':
+  'ctrl-e': 'editor:move-to-end-of-line'
+
+'atom-workspace':
+  'ctrl-p': 'core:move-up'
+  'ctrl-n': 'core:move-down'
+  'ctrl-f': 'core:move-right'
+  'ctrl-b': 'core:move-left'
