@@ -8,7 +8,7 @@ ln -snf ${BASE}/.atom ${HOME}/.atom
 ln -snf ${BASE}/bin ${HOME}/bin
 ln -snf ${BASE}/.tmux.conf ${HOME}/.tmux.conf
 ln -snf ${BASE}/.vimrc ${HOME}/.vimrc
-ln -snf ${BASE}/.gitignore ${HOME}/.gitignore_global
+ln -snf ${BASE}/.gitignore_global ${HOME}/.gitignore_global
 
 echo 'source ~/dotfiles/.zsh.d/zshenv' > ${HOME}/.zshenv
 echo 'source ~/dotfiles/.zsh.d/zshrc' > ${HOME}/.zshrc

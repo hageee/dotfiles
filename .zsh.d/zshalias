@@ -10,10 +10,8 @@ fi
 if [ -d '/usr/local/Cellar' ]; then
   alias emacs='TERM=xterm-256color /usr/local/Cellar/emacs/24.5/bin/emacs -nw'
   alias e='TERM=xterm-256color /usr/local/Cellar/emacs/24.5/bin/emacs -nw'
-fi
-
 ### Linux
-if [ -f '/usr/local/bin/emacs' ]; then
+elif type emacs > /dev/null 2>&1; then
   alias emacs='TERM=xterm-256color emacs -nw'
   alias e='TERM=xterm-256color emacs -nw'
 fi

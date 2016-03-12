@@ -28,10 +28,6 @@
 
 ;;(setq-default flycheck-disabled-checkers '(c/c++-clang))
 
-(require 'srefactor)
-(define-key c-mode-map (kbd "M-RET") 'srefactor-refactor-at-point)
-(define-key c++-mode-map (kbd "M-RET") 'srefactor-refactor-at-point)
-
 (defun my:ac-c-headers-init ()
   (require 'auto-complete-c-headers)
   (setq achead:get-include-directories-function (lambda () (append (achead:get-include-directories) (get-project-include-directories))))
