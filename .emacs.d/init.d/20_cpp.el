@@ -5,8 +5,9 @@
 (add-hook 'c-mode-common-hook
           (lambda ()
             (setq c-default-style "k&r") ;; カーニハン・リッチースタイル
-            (setq indent-tabs-mode nil)  ;; タブは利用しない
+            (setq indent-tabs-mode t)  ;; インデントはTAB
             (setq c-basic-offset 4)
+						(setq tab-width 4)
             ))
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
@@ -36,11 +37,11 @@
 (add-hook 'c++-mode-hook 'my:ac-c-headers-init)
 (add-hook 'c-mode-hook 'my:ac-c-headers-init)
 
-(require 'auto-complete-clang-async)
-(defun ac-cc-mode-setup ()
-  (setq ac-clang-complete-executable "~/.emacs.d/clang-complete")
-  (setq ac-sources (append ac-sources '(ac-source-clang-async)))
-  (ac-clang-launch-completion-process))
+;; (require 'auto-complete-clang-async)
+;; (defun ac-cc-mode-setup ()
+;;   (setq ac-clang-complete-executable "~/.emacs.d/clang-complete")
+;;   (setq ac-sources (append ac-sources '(ac-source-clang-async)))
+;;   (ac-clang-launch-completion-process))
 
 (defun my-ac-config ()
   (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)

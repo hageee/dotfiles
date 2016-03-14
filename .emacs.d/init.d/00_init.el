@@ -16,8 +16,8 @@
 (set-default 'mode-line-buffer-identification
            '(buffer-file-name ("%f") ("%b")))
 
-;; tab ではなく space を使う
-(setq-default indent-tabs-mode nil)
+;; インデントにはTABを使う
+(setq-default indent-tabs-mode t)
 ;; tab 幅を 4 に設定
 (setq-default tab-width 4)
 ;; narrowing を禁止
@@ -143,12 +143,6 @@
 ;; Command-Key and Option-Key
 (setq ns-command-modifier (quote meta))
 (setq ns-alternate-modifier (quote super))
-
-; タブ幅指定
-(setq tab-width 2
-         c-basic-offset 2
-         c-hanging-comment-ender-p nil
-         indent-tabs-mode nil)
 
 ;;; 行の折り返しをしない
 (setq truncate-lines t)

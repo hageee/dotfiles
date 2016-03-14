@@ -52,6 +52,3 @@
 ;; grep-edit
 (require 'grep)
 (require 'grep-edit)
-
-;; unitabify
-(require 'untabify-file)
