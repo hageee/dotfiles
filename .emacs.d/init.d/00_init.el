@@ -23,6 +23,35 @@
 ;; narrowing を禁止
 (put 'narrow-to-region 'disabled nil)
 
+;; 空白や長すぎる行を視覚化する。
+(require 'whitespace)
+(setq whitespace-style '(face  ; faceを使って視覚化する。
+												 trailing          ; 行末の空白を対象とする。
+												 spaces
+												 tabs
+												 empty
+												 space-mark
+												 tab-mark
+												 space-before-tab  ; タブの前にあるスペースを対象とする。
+												 space-after-tab)) ; タブの後にあるスペースを対象とする。
+
+(defvar my/bg-color "#232323")
+(set-face-attribute 'whitespace-trailing nil
+										:background my/bg-color
+										:foreground "DeepPink"
+										:underline t)
+(set-face-attribute 'whitespace-tab nil
+										:background my/bg-color
+										:foreground "#666666"
+										:underline nil)
+(set-face-attribute 'whitespace-space nil
+										:background my/bg-color
+										:foreground "#666666")
+;; (set-face-attribute 'whitespace-empty nil
+;; 										:background my/bg-color)
+
+(setq whitespace-action 'nil)
+
 ;; 再帰的にgrep
 (require 'grep)
 (setq grep-command-before-query "grep -nH -r --exclude \"*.log\" -e ")
@@ -52,19 +81,7 @@
 ;;; ウィンドウ内に収まらないときだけ括弧内も光らせる。
 ;(setq show-paren-style 'mixed)
 
-;; 空白や長すぎる行を視覚化する。
-(require 'whitespace)
 
-;; 1行が120桁を超えたら長すぎると判断する。
-;;(setq whitespace-line-column 120)
-
-(setq whitespace-style '(face  ; faceを使って視覚化する。
-             trailing          ; 行末の空白を対象とする。
-;             lines-tail        ; 長すぎる行のうち
-                               ; whitespace-line-column以降のみを
-                               ; 対象とする。
-             space-before-tab  ; タブの前にあるスペースを対象とする。
-             space-after-tab)) ; タブの後にあるスペースを対象とする。
 ;; デフォルトで視覚化を有効にする。
 (global-whitespace-mode 1)
 
