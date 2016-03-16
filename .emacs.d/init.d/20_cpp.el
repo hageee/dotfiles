@@ -7,8 +7,9 @@
             (setq c-default-style "k&r") ;; カーニハン・リッチースタイル
             (setq indent-tabs-mode t)  ;; インデントはTAB
             (setq c-basic-offset 4)
-						(setq tab-width 4)
-            ))
+            (setq tab-width 4)
+            )
+          )
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.inl\\'" . c++-mode))

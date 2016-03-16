@@ -16,39 +16,37 @@
 (set-default 'mode-line-buffer-identification
            '(buffer-file-name ("%f") ("%b")))
 
-;; インデントにはTABを使う
-(setq-default indent-tabs-mode t)
+;; インデントにはスペースを使う
+(setq-default indent-tabs-mode 'nil)
 ;; tab 幅を 4 に設定
-(setq-default tab-width 4)
+(setq-default tab-width 2)
 ;; narrowing を禁止
 (put 'narrow-to-region 'disabled nil)
 
 ;; 空白や長すぎる行を視覚化する。
 (require 'whitespace)
 (setq whitespace-style '(face  ; faceを使って視覚化する。
-												 trailing          ; 行末の空白を対象とする。
-												 spaces
-												 tabs
-												 empty
-												 space-mark
-												 tab-mark
-												 space-before-tab  ; タブの前にあるスペースを対象とする。
-												 space-after-tab)) ; タブの後にあるスペースを対象とする。
+                         trailing          ; 行末の空白を対象とする。
+                         spaces
+                         tabs
+                         empty
+                         space-mark
+                         tab-mark
+                         space-before-tab  ; タブの前にあるスペースを対象とする。
+                         space-after-tab)) ; タブの後にあるスペースを対象とする。
 
-(defvar my/bg-color "#232323")
+(defvar my/space-bg-color "#232323")
 (set-face-attribute 'whitespace-trailing nil
-										:background my/bg-color
-										:foreground "DeepPink"
-										:underline t)
+                                        :background my/space-bg-color
+                                        :foreground "DeepPink"
+                                        :underline t)
 (set-face-attribute 'whitespace-tab nil
-										:background my/bg-color
-										:foreground "#666666"
-										:underline nil)
+                                        :background my/space-bg-color
+                                        :foreground "#666666"
+                                        :underline nil)
 (set-face-attribute 'whitespace-space nil
-										:background my/bg-color
-										:foreground "#666666")
-;; (set-face-attribute 'whitespace-empty nil
-;; 										:background my/bg-color)
+                                        :background my/space-bg-color
+                                        :foreground "#666666")
 
 (setq whitespace-action 'nil)
 
@@ -175,3 +173,4 @@
 
 ;; imenu index自動更新
 (setq imenu-auto-rescan t)
+
