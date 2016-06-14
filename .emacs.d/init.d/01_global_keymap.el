@@ -6,7 +6,7 @@
 (define-key global-map (kbd "C-z") 'undo)                 ; undo
 (define-key global-map (kbd "C-c i") 'indent-region)      ; インデント
 (define-key global-map (kbd "C-c C-i") 'hippie-expand)    ; 補完
-(define-key global-map (kbd "C-c c") 'comment-or-uncomment-region) ; コメントアウト
+(define-key global-map (kbd "C-c C-c") 'comment-or-uncomment-region) ; コメントアウト
 (define-key global-map (kbd "C-c l") 'goto-line)          ; 指定行へ移動
 (define-key global-map (kbd "C-x g") 'grep)               ; grep
 (define-key global-map (kbd "C-c f") 'find-dired)         ; find-dired
