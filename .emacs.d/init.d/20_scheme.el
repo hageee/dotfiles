@@ -26,13 +26,14 @@
 
 (define-key global-map "\C-c S" 'scheme-other-window)
 
-(require 'smartparens-config)
-(smartparens-global-mode t)
+(defun my:scheme-init()
+  (require 'smartparens-config)
+  (smartparens-global-mode t)
+  (require 'rainbow-delimiters)
+)
 
-(require 'rainbow-delimiters)
-(add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'scheme-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'scheme-mode-hook 'my:scheme-init)
+(add-hook 'lisp-mode-hook 'my:scheme-init)
 
 ;; these setting should be placed after load-theme
 ;; using stronger colors
