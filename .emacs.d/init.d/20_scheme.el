@@ -30,6 +30,12 @@
   (require 'smartparens-config)
   (smartparens-global-mode t)
   (require 'rainbow-delimiters)
+  ;; making unmatched parens stand out more
+  (set-face-attribute 'rainbow-delimiters-unmatched-face nil
+                      :foreground 'unspecified
+                      :inherit 'error
+                      :strike-through t)
+
 )
 
 (add-hook 'scheme-mode-hook 'my:scheme-init)
@@ -48,11 +54,5 @@
    do
    (let ((face (intern (format "rainbow-delimiters-depth-%d-face" index))))
      (cl-callf color-saturate-name (face-foreground face) 100))))
-
-;; making unmatched parens stand out more
-(set-face-attribute 'rainbow-delimiters-unmatched-face nil
-                    :foreground 'unspecified
-                    :inherit 'error
-                    :strike-through t)
 
 ;;; 20_scheme.el ends here
