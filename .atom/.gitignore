@@ -8,3 +8,5 @@ projects.cson
 .apm
 .git-history
 blob-store
+git-time-machine/
+split-diff

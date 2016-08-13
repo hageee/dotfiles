@@ -1,19 +1,11 @@
 "*":
-  "exception-reporting":
-    userId: "f3d3fef5-d1d0-76e6-11a6-db0d9fd8b5eb"
-  welcome:
-    showOnStartup: false
-  metrics:
-    userId: "74dd163db65c8374e6a359008c8db95486acea09"
+  "atom-beautify":
+    _analyticsUserId: "5ae51fde-60a4-47ed-ac35-91cd33ea0f86"
+  "autoclose-html": {}
   autocomplete:
     includeCompletionsFromAllBuffers: true
-  linter:
-    showErrorInline: true
-    statusBar: "Show all errors"
-    ignoredLinterErrors: [
-      "php"
-    ]
   core:
+    allowPendingPaneItems: false
     disabledPackages: [
       "symbols-view"
       "minimap"
@@ -23,20 +15,36 @@
       "atom-dark-ui"
       "atom-dark-syntax"
     ]
-  "recent-files":
-    updated: false
-  whitespace:
-    ignoreWhitespaceOnCurrentLine: false
-  "atom-beautify":
-    _analyticsUserId: "5ae51fde-60a4-47ed-ac35-91cd33ea0f86"
   editor:
-    preferredLineLength: 128
     invisibles: {}
-    tabLength: 4
+    preferredLineLength: 128
     showIndentGuide: true
     showInvisibles: true
-  "autoclose-html": {}
+  "exception-reporting":
+    userId: "f3d3fef5-d1d0-76e6-11a6-db0d9fd8b5eb"
+  linter:
+    ignoredLinterErrors: [
+      "php"
+    ]
+    showErrorInline: true
+    statusBar: "Show all errors"
+  "linter-python":
+    executablePath: "/usr/local/bin/pylama"
+  metrics:
+    userId: "74dd163db65c8374e6a359008c8db95486acea09"
   react: {}
+  "recent-files":
+    updated: false
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
 ".ruby.source":
   editor:
     tabLength: 2
