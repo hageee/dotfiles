@@ -5,7 +5,6 @@ BASE=$(cd $(dirname $0) && pwd)
 ln -snf ${BASE}/.zsh.d/ ${HOME}/.zsh.d
 ln -snf ${BASE}/.emacs.d ${HOME}/.emacs.d
 ln -snf ${BASE}/.atom ${HOME}/.atom
-ln -snf ${BASE}/bin ${HOME}/bin
 ln -snf ${BASE}/.tmux.conf ${HOME}/.tmux.conf
 ln -snf ${BASE}/.vimrc ${HOME}/.vimrc
 ln -snf ${BASE}/.gitignore_global ${HOME}/.gitignore_global
