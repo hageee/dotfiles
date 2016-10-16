@@ -2,7 +2,6 @@ source ${HOME}/dotfiles/antigen/antigen.zsh
 
 antigen bundle brew
 antigen bundle unixorn/autoupdate-antigen.zshplugin
-antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle willghatch/zsh-cdr
 antigen bundle MikeDacre/cdbk

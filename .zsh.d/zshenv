@@ -31,6 +31,7 @@ path=(# システム用
       /cygdrive/c/meadow/bin(N-/)
       # システム用
       /usr/local/bin(N-/)
+      /usr/local/sbin(N-/)
       /usr/bin(N-/)
       /usr/sbin(N-/)
       /usr/games(N-/))
