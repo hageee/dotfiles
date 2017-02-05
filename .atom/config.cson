@@ -30,6 +30,7 @@
     statusBar: "Show all errors"
   "linter-python":
     executablePath: "/usr/local/bin/pylama"
+    ignoreCodes: "E501"
   metrics:
     userId: "74dd163db65c8374e6a359008c8db95486acea09"
   react: {}
