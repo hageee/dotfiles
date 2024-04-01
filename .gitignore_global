@@ -11,3 +11,5 @@ tags
 .vs/
 *.VC.opendb
 *.pyc
+.~lock.*
+
